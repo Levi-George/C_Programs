@@ -260,14 +260,22 @@ void Move(int player, int playerPos, int rollCode, int numOfPlayers)
 		}
 	}
 
+	// ******************TODO: There may be a logic error below, look at this more
+	// ******************
+	// ******************
+	// ******************
+	// ******************
+	// ****************** 
+
 	//This ensures they don't roll over 50 or under 0
+	//if the player does not roll an exact ten, they do not win
 	if (((playerPos + rollCode) > 50 || (playerPos + rollCode) < 0) && (rollCode != 12 && rollCode != 7 && rollCode != 11))
 	{
 		Board[playerPos] = 0;
 		return;
 	}
 
-	//This if else if statement will take care of any issues regarding one player landing on another
+	//This if-else if statement will take care of any issues regarding one player landing on another
 	if ((playerPos + rollCode) == one && (rollCode != 12 && rollCode != 7 && rollCode != 11))
 	{
 		cout << "Player " << player << " has overtaken Player 1." << endl;
@@ -338,6 +346,7 @@ int checkBoard(int x, int players, int numOfPlayers) //X is the sum of the two d
 	else
 		return pLocate;
 }
+
 //This will classify the roll, and return a roll code, which will be used to move the player
 int checkRoll(int x, int y, int players)//X is the first die, and Y is the second, players is the player currently rolling
 {
