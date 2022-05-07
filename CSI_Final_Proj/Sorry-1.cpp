@@ -167,9 +167,27 @@ void Move7(int player, int playerPos, int rollCode, int numOfPlayers)
 	int leadPlayer = player;
 	int lastIndex = playerPos;
 	int lastPlayer = player;
+	
 
 	//*TODO: Fix this iterator, if we have four pre-determined user IDs we shouldn't have to do this, just iterate across the board
 	//			and mark the last person we found.			*
+
+	/*
+		int curr = -1 -This will be used to keep track of last player found
+		int playersFound = 0;
+
+		for ( # of spaces in board)
+			if(curr is -1 and board[i] != 0)
+				lastPlayer = board[i]
+				curr = board[i]
+
+			else if(board[i] != 0)
+				playersFound++;
+			
+			if(playersFound == #ofPlayers)
+				leadPlayer == board[i]
+
+	*/
 
 	//This function will determine who is in the lead, and who is last by sorting them.
 	for (int i = 1; i < numOfPlayers; i++)
