@@ -1,7 +1,7 @@
 /*
 Author: Levi George
 Program Name: Sorry
-Date Last Updated: 11/21/17
+Date Last Updated: 05/07/22
 Program Purpose: This program will start a game of sorry, it will allow up to four players, and will follow the classic rules of a sorry game.
 */
 
@@ -27,7 +27,9 @@ int main()
 	srand((unsigned(time(NULL))));//Seeds the random number generator
 
 	int die1, die2;//These will store the die roll values
+
 	int players;//This will store the number of players
+
 	int turnCounter = 1;//This will keep track of whose turn it is
 	int	rollCode;//This will represent the code assigned to the roll the player made
 	int playerPos;//This will represent the current players position
@@ -100,18 +102,12 @@ int main()
 
 		}
 
-		//This will increment the turns, so if player one went first, this make allow player two to go.
-		turnCounter++;
-		if (turnCounter > players)
-		{
-			turnCounter = 1;
-		}
-
 		//This will query the user as to whether or not they want to play again.
 		if (noWin == false)
 		{
-			//This will request the input and store it in pa.
+			//This will request the input and store it in pa (player acceptance).
 			string pa = "N";
+
 			cout << "Would you like to play again(y/n)?" << endl;
 			cin >> pa;
 
@@ -146,6 +142,13 @@ int main()
 			}
 		}
 
+		//This will increment the turns, so if player one went first, this will allow player two to go next.
+		turnCounter++;
+		if (turnCounter > players)
+		{
+			turnCounter = 1;
+		}
+
 	}
 
 	std::system("Pause");
@@ -164,6 +167,9 @@ void Move7(int player, int playerPos, int rollCode, int numOfPlayers)
 	int leadPlayer = player;
 	int lastIndex = playerPos;
 	int lastPlayer = player;
+
+	//*TODO: Fix this iterator, if we have four pre-determined user IDs we shouldn't have to do this, just iterate across the board
+	//			and mark the last person we found.			*
 
 	//This function will determine who is in the lead, and who is last by sorting them.
 	for (int i = 1; i < numOfPlayers; i++)
@@ -208,6 +214,8 @@ void Move7(int player, int playerPos, int rollCode, int numOfPlayers)
 
 
 }
+
+
 //This function will facilitate movement for the normal rolls
 void Move(int player, int playerPos, int rollCode, int numOfPlayers)
 {
@@ -282,6 +290,8 @@ void Move(int player, int playerPos, int rollCode, int numOfPlayers)
 
 
 }
+
+
 //checkBoard will do the math, and actual sorting to figure out where the current player is.
 int checkBoard(int x, int players, int numOfPlayers) //X is the sum of the two dies, players is the current player, and numOfPlayers is the number of players
 {
@@ -402,7 +412,11 @@ int checkRoll(int x, int y, int players)//X is the first die, and Y is the secon
 		return 0;
 	}
 	
+	//user should not reach this point
+	std::cout << "Player has befuddled the game :[";
+	return 0;
 }
+
 //printLocate will find print the locations of each player
 void printLocate(int x, int players, int numOfPlayers)
 {
