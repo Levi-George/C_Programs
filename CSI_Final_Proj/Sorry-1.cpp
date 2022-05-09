@@ -48,15 +48,17 @@ int main()
 		cin >> players;
 	}
 	
-	//This makes up for the disparity with the array in counting
-	cout << "\nRemember, you will start on space 0, so if you were to roll a six on the first space, it will show you one space 5.\n";
+	//This makes up for the disparity with the array in counting - ~2018
+	/*cout << "\nRemember, you will start on space 0, so if you were to roll a six on the first space, it will show you on space 5 at the end of your turn.\n";*/
+
+	// ^^^^^^^ Anything in the backend of your systems should not be made transparent to the user, the system should work without exposing itself to the user. - 2022
 
 	//This loop will run the actual portion which is the game, while no one has won
-	while (noWin == true)
+	while (noWin)
 	{
 		//This will print out the beginning of a player's turn
-		cout << " \nPlayer " << turnCounter << " is going." << endl;
-		cout << "Player " << turnCounter << " is rolling the die. \n Rolling..." << endl;
+		cout << " \nIt is Player " << turnCounter << "'s turn" << endl;
+		cout << "They are rolling the die. \n Rolling..." << endl;
 		system("Pause");
 		die1 = rollDice(); die2 = rollDice();
 		cout << die1 << " " << die2 << "\n" <<endl;
@@ -76,7 +78,7 @@ int main()
 		}
 		else if(rollCode == 0)
 		{
-			//This space is supposed to do nothing, I wasn't sure how else to accomplish that.
+			//This will save some computing power by skipping Move when rollCode == 0
 		}
 		else
 		{
@@ -103,7 +105,7 @@ int main()
 		}
 
 		//This will query the user as to whether or not they want to play again.
-		if (noWin == false)
+		if (!noWin)
 		{
 			//This will request the input and store it in pa (player acceptance).
 			string pa = "N";
