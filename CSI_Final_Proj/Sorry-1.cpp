@@ -270,12 +270,34 @@ void Move(int player, int playerPos, int rollCode, int numOfPlayers)
 	// ****************** 
 
 	//This ensures they don't roll over 50 or under 0
-	//if the player does not roll an exact ten, they do not win
+	//if the player does not land exactly on 50, they do not win
 	if (((playerPos + rollCode) > 50 || (playerPos + rollCode) < 0) && (rollCode != 12 && rollCode != 7 && rollCode != 11))
 	{
 		Board[playerPos] = 0;
 		return;
 	}
+
+	/*
+	
+		if(Board[(playerPos+rollCode)] != 0)
+		{
+			int currPlayer = Board[playerPos];
+
+			//player at lead spot goes to players old spot
+			Board[playerPos] = Board[playerPos+rollCode];
+
+			Board[playerPos+rollCode] = currPlayer;
+		}
+		else
+		{
+			Board[playerPos] = 0;
+			Board[playerPos+rollCode] = currPlayer;
+		}
+
+
+	
+	*/
+
 
 	//This if-else if statement will take care of any issues regarding one player landing on another
 	if ((playerPos + rollCode) == one && (rollCode != 12 && rollCode != 7 && rollCode != 11))
