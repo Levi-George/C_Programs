@@ -277,11 +277,14 @@ void Move(int player, int playerPos, int rollCode, int numOfPlayers)
 		return;
 	}
 
-	/*
+	/*New Code
 	
+		int currPlayer = Board[playerPos];
+
 		if(Board[(playerPos+rollCode)] != 0)
 		{
-			int currPlayer = Board[playerPos];
+
+			std::cout << "Player " + Board[playerPos] + " has overtaken " + Board[playerPos+rollCode] + ". \n";
 
 			//player at lead spot goes to players old spot
 			Board[playerPos] = Board[playerPos+rollCode];
@@ -299,6 +302,7 @@ void Move(int player, int playerPos, int rollCode, int numOfPlayers)
 	*/
 
 
+	//we don't need the second half of the AND in these if-else-if clauses since we already checked at the start of the function.
 	//This if-else if statement will take care of any issues regarding one player landing on another
 	if ((playerPos + rollCode) == one && (rollCode != 12 && rollCode != 7 && rollCode != 11))
 	{
@@ -362,13 +366,18 @@ int checkBoard(int x, int players, int numOfPlayers) //X is the sum of the two d
 		y++;
 	}
 	
+	//We don't need to return -1 if pLocate is negative one. -L 05/10/22
 	//This will return a negative one, if they are on the start, or their location, if they are not
+	/*
 	if (pLocate == -1)
 	{
 		return -1;
 	}
 	else
 		return pLocate;
+	*/
+
+	return pLocate;
 }
 
 //This will classify the roll, and return a roll code, which will be used to move the player
@@ -394,7 +403,7 @@ int checkRoll(int x, int y, int players)//X is the first die, and Y is the secon
 	}
 
 	//Checks if they are on the board, if the counter has reached 50(whichs implies the user isn't on the board), and if the
-	//two die aren't similar(if they are the, this loop is pointless, because the player is now able to move.
+	//two die aren't similar(if they are, this loop is pointless, because the player is now able to move.
 	while (onBoard == false && z < 51 && x != y)	
 	{
 		if (Board[z] == players)
@@ -468,7 +477,7 @@ int checkRoll(int x, int y, int players)//X is the first die, and Y is the secon
 	return 0;
 }
 
-//printLocate will find print the locations of each player
+//printLocate will find/print the locations of each player
 void printLocate(int x, int players, int numOfPlayers)
 {
 	//These will keep track of the players it has tracked, and prevents double output
