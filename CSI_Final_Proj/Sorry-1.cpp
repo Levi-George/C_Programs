@@ -237,7 +237,7 @@ void Move7(int player, int playerPos, int rollCode, int numOfPlayers)
 
 
 //This function will facilitate movement for the normal rolls
-void Move(int player, int playerPos, int rollCode, int numOfPlayers)
+void Move(int player, int playerPos, int rollCode, int numOfPlayers)//player is the current player; playerPos is the players position on the board (array); numOfPlayers is the number of players.
 {
 	int one = 0, two = 0, three = 0, four = 0;//records positions of the respective player
 
@@ -277,23 +277,21 @@ void Move(int player, int playerPos, int rollCode, int numOfPlayers)
 		return;
 	}
 
-	//logic error here, we need a better way of finding the current player
-	int currPlayer = Board[playerPos];
 
-	if(Board[(playerPos+rollCode)] != 0)
+	if(Board[(playerPos+rollCode)])//we can say != 0 or since 0 is falsy we can drop the comparison
 	{
 
-		std::cout << "Player " << Board[playerPos] << " has overtaken " << Board[playerPos+rollCode] << ". \n";
+		std::cout << "Player " << player << " has overtaken " << Board[playerPos+rollCode] << ". \n";
 
 		//player at lead spot goes to players old spot
 		Board[playerPos] = Board[playerPos+rollCode];
 
-		Board[playerPos+rollCode] = currPlayer;
+		Board[playerPos+rollCode] = player; //player moves to new position
 	}
 	else
 	{
-		Board[playerPos] = 0;
-		Board[playerPos+rollCode] = currPlayer;
+		Board[playerPos] = 0;				//player is no longer at old position
+		Board[playerPos+rollCode] = player; //player moves to an old position
 	}
 
 
