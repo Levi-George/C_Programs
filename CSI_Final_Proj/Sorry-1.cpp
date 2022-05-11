@@ -277,33 +277,29 @@ void Move(int player, int playerPos, int rollCode, int numOfPlayers)
 		return;
 	}
 
-	/*New Code
-	
-		int currPlayer = Board[playerPos];
+	//logic error here, we need a better way of finding the current player
+	int currPlayer = Board[playerPos];
 
-		if(Board[(playerPos+rollCode)] != 0)
-		{
+	if(Board[(playerPos+rollCode)] != 0)
+	{
 
-			std::cout << "Player " + Board[playerPos] + " has overtaken " + Board[playerPos+rollCode] + ". \n";
+		std::cout << "Player " << Board[playerPos] << " has overtaken " << Board[playerPos+rollCode] << ". \n";
 
-			//player at lead spot goes to players old spot
-			Board[playerPos] = Board[playerPos+rollCode];
+		//player at lead spot goes to players old spot
+		Board[playerPos] = Board[playerPos+rollCode];
 
-			Board[playerPos+rollCode] = currPlayer;
-		}
-		else
-		{
-			Board[playerPos] = 0;
-			Board[playerPos+rollCode] = currPlayer;
-		}
-
-
-	
-	*/
+		Board[playerPos+rollCode] = currPlayer;
+	}
+	else
+	{
+		Board[playerPos] = 0;
+		Board[playerPos+rollCode] = currPlayer;
+	}
 
 
 	//we don't need the second half of the AND in these if-else-if clauses since we already checked at the start of the function.
 	//This if-else if statement will take care of any issues regarding one player landing on another
+	/*Old Code
 	if ((playerPos + rollCode) == one && (rollCode != 12 && rollCode != 7 && rollCode != 11))
 	{
 		cout << "Player " << player << " has overtaken Player 1." << endl;
@@ -341,7 +337,7 @@ void Move(int player, int playerPos, int rollCode, int numOfPlayers)
 			return;
 		}
 	}
-
+	*/
 
 }
 
