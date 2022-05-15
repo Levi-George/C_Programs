@@ -10,7 +10,7 @@ Program Purpose: This program will start a game of sorry, it will allow up to fo
 #include <cstdlib>
 #include <string>
 
-using namespace std;
+using namespace std;//I will be removing this
 
 int rollDice();//This function will roll the dice
 int checkBoard(int, int, int);//This function will check the board for the location of the player
@@ -72,9 +72,16 @@ int main()
 		{
 			Move7(turnCounter, playerPos, rollCode, players);
 		}
-		else if (rollCode == 12 && playerPos != -1)
-		{
+		else if (rollCode == 12)//this roll code should always put the player at the zeroeth position since 
+		{											//it is a double roll - remove  && playerPos != -1
+
+			if(!Board[0])//in case a player was just put on spot 0
+			{
+				std::cout << "Player " << Board[0] << "has been taken off the board, Player " << turnCounter << " is now at the start of the board." << endl;
+			}
+
 			Board[playerPos] = 0;
+			Board[0] = turnCounter; //this doubles as showing the current player
 		}
 		else if(rollCode == 0)
 		{
@@ -108,7 +115,7 @@ int main()
 		if (!noWin)
 		{
 			//This will request the input and store it in pa (player acceptance).
-			string pa = "N";
+			string pa = "N";//player acceptance
 
 			cout << "Would you like to play again(y/n)?" << endl;
 			cin >> pa;
@@ -239,35 +246,6 @@ void Move7(int player, int playerPos, int rollCode, int numOfPlayers)
 //This function will facilitate movement for the normal rolls
 void Move(int player, int playerPos, int rollCode, int numOfPlayers)//player is the current player; playerPos is the players position on the board (array); numOfPlayers is the number of players.
 {
-	int one = 0, two = 0, three = 0, four = 0;//records positions of the respective player
-
-	//This for loop will mark each players position on the map for the program
-	for (int i = 0; i < 51; i++)
-	{
-		if (Board[i] == 1 && player != 1)
-		{
-			one = i;//This will mark one
-		}
-		else if (Board[i] == 2 && player != 2)
-		{
-			two = i;//This will mark two
-		}
-		else if (Board[i] == 3 && player != 3)
-		{
-			three = i;//This will mark three
-		}
-		else if (Board[i] == 4 && player != 4)
-		{
-			four = i;//This will mark four
-		}
-	}
-
-	// ******************TODO: There may be a logic error below, look at this more
-	// ******************
-	// ******************
-	// ******************
-	// ******************
-	// ****************** 
 
 	//This ensures they don't roll over 50 or under 0
 	//if the player does not land exactly on 50, they do not win
@@ -276,7 +254,6 @@ void Move(int player, int playerPos, int rollCode, int numOfPlayers)//player is 
 		Board[playerPos] = 0;
 		return;
 	}
-
 
 	if(Board[(playerPos+rollCode)])//we can say != 0 or since 0 is falsy we can drop the comparison
 	{
@@ -291,52 +268,8 @@ void Move(int player, int playerPos, int rollCode, int numOfPlayers)//player is 
 	else
 	{
 		Board[playerPos] = 0;				//player is no longer at old position
-		Board[playerPos+rollCode] = player; //player moves to an old position
+		Board[playerPos+rollCode] = player; //player moves to a new position
 	}
-
-
-	//we don't need the second half of the AND in these if-else-if clauses since we already checked at the start of the function.
-	//This if-else if statement will take care of any issues regarding one player landing on another
-	/*Old Code
-	if ((playerPos + rollCode) == one && (rollCode != 12 && rollCode != 7 && rollCode != 11))
-	{
-		cout << "Player " << player << " has overtaken Player 1." << endl;
-		Board[one] = player;
-		Board[playerPos] = 1;
-		return;
-	}
-	else if ((playerPos + rollCode) == two && (rollCode != 12 && rollCode != 7 && rollCode != 11))
-	{
-		cout << "Player " << player << " has overtaken Player 2." << endl;
-		Board[two] = player;
-		Board[playerPos] = 2;
-		return;
-	}
-	else if ((playerPos + rollCode) == three && (rollCode != 12 && rollCode != 7 && rollCode != 11))
-	{
-		cout << "Player " << player << " has overtaken Player 3." << endl;
-		Board[three] = player;
-		Board[playerPos] = 3;
-		return;
-	}
-	else if ((playerPos + rollCode) == four && (rollCode != 12 && rollCode != 7 && rollCode != 11))
-	{
-		cout << "Player " << player << " has overtaken Player 4." << endl;
-		Board[four] = player;
-		Board[playerPos] = 4;
-		return;
-	}
-	else
-	{
-		if (rollCode != 12 && rollCode != 7 && rollCode != 11)
-		{
-			Board[playerPos + rollCode] = player;
-			Board[playerPos] = 0;
-			return;
-		}
-	}
-	*/
-
 }
 
 
