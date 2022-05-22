@@ -239,35 +239,6 @@ void Move7(int player, int playerPos, int rollCode, int numOfPlayers)
 //This function will facilitate movement for the normal rolls
 void Move(int player, int playerPos, int rollCode, int numOfPlayers)//player is the current player; playerPos is the players position on the board (array); numOfPlayers is the number of players.
 {
-	int one = 0, two = 0, three = 0, four = 0;//records positions of the respective player
-
-	//This for loop will mark each players position on the map for the program
-	for (int i = 0; i < 51; i++)
-	{
-		if (Board[i] == 1 && player != 1)
-		{
-			one = i;//This will mark one
-		}
-		else if (Board[i] == 2 && player != 2)
-		{
-			two = i;//This will mark two
-		}
-		else if (Board[i] == 3 && player != 3)
-		{
-			three = i;//This will mark three
-		}
-		else if (Board[i] == 4 && player != 4)
-		{
-			four = i;//This will mark four
-		}
-	}
-
-	// ******************TODO: There may be a logic error below, look at this more
-	// ******************
-	// ******************
-	// ******************
-	// ******************
-	// ****************** 
 
 	//This ensures they don't roll over 50 or under 0
 	//if the player does not land exactly on 50, they do not win
@@ -291,51 +262,8 @@ void Move(int player, int playerPos, int rollCode, int numOfPlayers)//player is 
 	else
 	{
 		Board[playerPos] = 0;				//player is no longer at old position
-		Board[playerPos+rollCode] = player; //player moves to an old position
+		Board[playerPos+rollCode] = player; //player moves to new position
 	}
-
-
-	//we don't need the second half of the AND in these if-else-if clauses since we already checked at the start of the function.
-	//This if-else if statement will take care of any issues regarding one player landing on another
-	/*Old Code
-	if ((playerPos + rollCode) == one && (rollCode != 12 && rollCode != 7 && rollCode != 11))
-	{
-		cout << "Player " << player << " has overtaken Player 1." << endl;
-		Board[one] = player;
-		Board[playerPos] = 1;
-		return;
-	}
-	else if ((playerPos + rollCode) == two && (rollCode != 12 && rollCode != 7 && rollCode != 11))
-	{
-		cout << "Player " << player << " has overtaken Player 2." << endl;
-		Board[two] = player;
-		Board[playerPos] = 2;
-		return;
-	}
-	else if ((playerPos + rollCode) == three && (rollCode != 12 && rollCode != 7 && rollCode != 11))
-	{
-		cout << "Player " << player << " has overtaken Player 3." << endl;
-		Board[three] = player;
-		Board[playerPos] = 3;
-		return;
-	}
-	else if ((playerPos + rollCode) == four && (rollCode != 12 && rollCode != 7 && rollCode != 11))
-	{
-		cout << "Player " << player << " has overtaken Player 4." << endl;
-		Board[four] = player;
-		Board[playerPos] = 4;
-		return;
-	}
-	else
-	{
-		if (rollCode != 12 && rollCode != 7 && rollCode != 11)
-		{
-			Board[playerPos + rollCode] = player;
-			Board[playerPos] = 0;
-			return;
-		}
-	}
-	*/
 
 }
 
@@ -359,17 +287,6 @@ int checkBoard(int x, int players, int numOfPlayers) //X is the sum of the two d
 		}
 		y++;
 	}
-	
-	//We don't need to return -1 if pLocate is negative one. -L 05/10/22
-	//This will return a negative one, if they are on the start, or their location, if they are not
-	/*
-	if (pLocate == -1)
-	{
-		return -1;
-	}
-	else
-		return pLocate;
-	*/
 
 	return pLocate;
 }
