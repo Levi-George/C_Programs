@@ -10,7 +10,7 @@ Program Purpose: This program will start a game of sorry, it will allow up to fo
 #include <cstdlib>
 #include <string>
 
-using namespace std;
+using namespace std;//I will be removing this
 
 int rollDice();//This function will roll the dice
 int checkBoard(int, int, int);//This function will check the board for the location of the player
@@ -72,9 +72,16 @@ int main()
 		{
 			Move7(turnCounter, playerPos, rollCode, players);
 		}
-		else if (rollCode == 12 && playerPos != -1)
-		{
+		else if (rollCode == 12)//this roll code should always put the player at the zeroeth position since 
+		{											//it is a double roll - remove  && playerPos != -1
+
+			if(!Board[0])//in case a player was just put on spot 0
+			{
+				std::cout << "Player " << Board[0] << "has been taken off the board, Player " << turnCounter << " is now at the start of the board." << endl;
+			}
+
 			Board[playerPos] = 0;
+			Board[0] = turnCounter; //this doubles as showing the current player
 		}
 		else if(rollCode == 0)
 		{
@@ -108,7 +115,7 @@ int main()
 		if (!noWin)
 		{
 			//This will request the input and store it in pa (player acceptance).
-			string pa = "N";
+			string pa = "N";//player acceptance
 
 			cout << "Would you like to play again(y/n)?" << endl;
 			cin >> pa;
@@ -247,7 +254,6 @@ void Move(int player, int playerPos, int rollCode, int numOfPlayers)//player is 
 		Board[playerPos] = 0;
 		return;
 	}
-
 
 	if(Board[(playerPos+rollCode)])//we can say != 0 or since 0 is falsy we can drop the comparison
 	{
