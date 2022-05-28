@@ -176,65 +176,51 @@ void Move7(int player, int playerPos, int rollCode, int numOfPlayers)
 	int leadPlayer = player;
 	int lastIndex = playerPos;
 	int lastPlayer = player;
-	
 
-	//*TODO: Fix this iterator, if we have four pre-determined user IDs we shouldn't have to do this, just iterate across the board
-	//			and mark the last person we found.			*
+	int curr = -1, playersFound = 0;
 
-	/*
-		int curr = -1 -This will be used to keep track of last player found
-		int playersFound = 0;
-
-		for ( # of spaces in board)
-			if(curr is -1 and board[i] != 0)
-				lastPlayer = board[i]
-				curr = board[i]
-
-			else if(board[i] != 0)
-				playersFound++;
-			
-			if(playersFound == #ofPlayers)
-				leadPlayer == board[i]
-
-	*/
-
-	//This function will determine who is in the lead, and who is last by sorting them.
-	for (int i = 1; i < numOfPlayers; i++)
+	for(int i = 1; i < 51; i++)
 	{
-		for (int j = 0; j < 51; j++)
+		if(curr != -1 && Board[i] != 0)//when we find the first player on the board
 		{
-			if (leadIndex < j && Board[j] != 0)
-			{
-				leadIndex = j;
-				leadPlayer = Board[j];
-			}
-			if (lastIndex > j && Board[j] != 0)
-			{
-				lastIndex = j;
-				lastPlayer = Board[j];
-			}
+			lastPlayer = Board[i];
+			lastIndex = i;
+
+			curr = lastPlayer;
+			playersFound++;//we find the first player and mark it here.
+		}
+		else if(Board[i] != 0)//subsequent finds marked here
+		{
+			playersFound++;
+		}
+
+		if(playersFound == numOfPlayers && Board[i] != 0)//this should only trigger when we iterate the final player
+		{
+			leadPlayer == Board[i];
+			leadIndex == i;
 		}
 	}
 
+	//this needs refactored
 	//Depending on what is rolled this will switch two players positions, from lead player to last, or last to lead
-	if (rollCode == 7 && leadIndex != playerPos && playerPos != -1)
+	if (rollCode == 7 && leadIndex != playerPos && playerPos != -1)//Player must not be the leader and must be on the board
 	{
 		cout << "Player " << player << " switched places with Player " << leadPlayer << endl;
 		Board[leadIndex] = player;
 		Board[playerPos] = leadPlayer;
 	}
-	else if (leadIndex == playerPos && rollCode == 7 && playerPos != -1)
+	else if (leadIndex == playerPos && rollCode == 7 && playerPos != -1)//If player is in lead and they rolled a 7 (player swaps with lead) nothing changes
 	{
 		cout << " Nothing happened, Player " << player << " is already in the lead." << endl;
 	}
 
-	if (rollCode == 11 && lastIndex != playerPos && playerPos != -1)
+	if (rollCode == 11 && lastIndex != playerPos && playerPos != -1)//If the player isn't last and they are on the board, then they will get put in the last position.
 	{
 		cout << "Player " << player << " switched places with Player " << lastPlayer << endl;
 		Board[lastIndex] = player;
 		Board[playerPos] = lastPlayer;
 	}
-	else if (lastIndex == playerPos && rollCode == 11 && playerPos != -1)
+	else if (lastIndex == playerPos && rollCode == 11 && playerPos != -1)//If the player is in last or not on the board, then nothing will change.
 	{
 		cout << "Nothing happened. Player " << player << " is already in last." << endl;
 	}
