@@ -34,15 +34,22 @@ void pickup_forks(int*);
 void return_forks(int*);
 
 
-int main(double time_Param)
+int main(int argc, char * argv[])
 {
     srand(time(0));
 
-    if(time_Param < 1)
+    if(argc != 2)
     {
-        printf("Yo, you should try to enter a positive amount of time ( > 0 )");
-        return 1;
+        printf("You need one and only one argument\n");
+        return 0;
     }
+
+    if(argv[2] < 0 )
+    {
+        printf("You cannot run the program for less than 0 seconds\n");
+    }
+
+    int time_Param = atof(argv[2]);
 
     //initialize our mutex and condition variable
     pthread_mutex_init(&P_StatusMutex, NULL);
