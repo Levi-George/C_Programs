@@ -22,6 +22,9 @@ void printLocate(int, int, int);//This function will print the location of the p
 //This array represents the board
 int Board[51] = {};
 
+//I might refactor the board representation to be a 4 space vector or array
+//this will reduce the heavy lifting of looping through a 51 space vector
+
 int main()
 {
 	srand((unsigned(time(NULL))));//Seeds the random number generator
