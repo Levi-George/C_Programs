@@ -36,6 +36,8 @@ void return_forks(int*);
 
 int main(int argc, char * argv[])
 {
+    printf("Main Start\n");
+
     srand(time(0));
 
     if(argc != 2)
@@ -44,16 +46,23 @@ int main(int argc, char * argv[])
         return 0;
     }
 
-    if(argv[2] < 0 )
+    printf("Check arg\n");
+
+    if(atoi(argv[1]) < 0 )
     {
         printf("You cannot run the program for less than 0 seconds\n");
     }
 
-    int time_Param = atof(argv[2]);
+    double time_Param = atof(argv[1]);
+
+    printf("Dining Philosophers, running sim for: %f s\n", time_Param);
+    printf("Before initialization of sem and mutex\n");
 
     //initialize our mutex and condition variable
     pthread_mutex_init(&P_StatusMutex, NULL);
     sem_init(&mealAccess, 0, 1);
+
+    printf("After Mutex and Semaphore initialization\n");
 
     //initialize our semaphores
     for(int i = 0; i < NUM_OF_PHIL; i++)
@@ -63,6 +72,7 @@ int main(int argc, char * argv[])
         pthread_cond_init(&P_StatusCond[i], NULL);
     }
     
+    printf("Before Thread Creation\n");
 
     //create 5 philosopher threads
     for(int i = 0; i < NUM_OF_PHIL; i++)
@@ -102,18 +112,22 @@ void *philosopher(void *PHIL_NUM)
         //after we check our while condition
         sem_post(&mealAccess);
         
+        printf("Philosopher %ld preparing to eat\n", (long)PHIL_NUM);
         pickup_forks(PHIL_NUM);
 
         //spend time eating
         sleep((rand() % (int)(MAX_ACTIVE_TIME)) + 1); //sleep between 1 and 4 seconds
 
+        printf("Philosopher %ld preparing to think\n", (long)PHIL_NUM);
         return_forks(PHIL_NUM);
         
         //spend time thinking
         sleep((rand() % (int)(MAX_ACTIVE_TIME)) + 1); //sleep between 1 and 4 seconds
 
         //before we check our while condition
+        printf("Philosopher %ld checks meals\n", (long)PHIL_NUM);
         sem_wait(&mealAccess);
+        printf("Meals eaten thus far: %d", meals );
     }
 
 
@@ -121,8 +135,10 @@ void *philosopher(void *PHIL_NUM)
 
 void pickup_forks(int* PHIL_NUM)
 {
+    printf("Philosopher %ld locking out for fork pickup\n", (long)PHIL_NUM);
     pthread_mutex_lock(&P_StatusMutex);
 
+    printf("Philosopher %ld is now hungry\n", (long)PHIL_NUM);
     P_Status[*PHIL_NUM] = HUNGRY;
 
     //what about PHIL 0? We do this to avoid out-of-bounds when PHIL 0
@@ -130,17 +146,27 @@ void pickup_forks(int* PHIL_NUM)
     int rightPHIL = (*PHIL_NUM + 4) % NUM_OF_PHIL;
     int leftPHIL = (*PHIL_NUM + 1) % NUM_OF_PHIL;
 
-    if(P_Status[rightPHIL] == EATING || P_Status[leftPHIL] == EATING)
+
+    printf("Philosopher %ld checking if neighbors are eating\n", (long)PHIL_NUM);
+    printf("Philosopher %ld checking if left neighbor is eating\n", (long)PHIL_NUM);
+    if(P_Status[leftPHIL] == EATING)
     {
         //we wait for the left first then the second
         pthread_cond_wait(&P_StatusCond[leftPHIL], &P_StatusMutex);
-        pthread_cond_wait(&P_StatusCond[rightPHIL], &P_StatusMutex);
+       
+    }
+    printf("Philosopher %ld checking if right neighbor is eating\n", (long)PHIL_NUM);
+    if(P_Status[rightPHIL] == EATING)
+    {
+         pthread_cond_wait(&P_StatusCond[rightPHIL], &P_StatusMutex);
     }
 
+    printf("Philosopher %ld waiting for chopsticks\n", (long)PHIL_NUM);
     sem_wait(&chopstick[rightPHIL]);
     sem_wait(&chopstick[leftPHIL]);
     P_Status[*PHIL_NUM] = EATING;
 
+    printf("Philosopher %ld unlocking status mutex\n", (long)PHIL_NUM);
     pthread_mutex_unlock(&P_StatusMutex);
 
 }
