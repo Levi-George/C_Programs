@@ -139,6 +139,8 @@ void *philosopher(void *PN)
         printf("Philosopher %d's meals eaten thus far: %d \n", PHIL_NUM,meals );
     }
 
+    //we exit the loop then we release our semaphore
+    sem_post(&mealAccess);
 
 }
 
