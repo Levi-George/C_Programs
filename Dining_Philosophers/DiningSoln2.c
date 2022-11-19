@@ -146,7 +146,7 @@ void pickup_forks(void* PN)
 {
     int PHIL_NUM = *(int *)PN;
     
-    printf("Philosopher %d locking out for fork pickup\n", PHIL_NUM);
+    printf("Philosopher %d locking out for chopstick pickup\n", PHIL_NUM);
     pthread_mutex_lock(&P_StatusMutex);
 
     printf("Philosopher %d is now hungry\n", PHIL_NUM);
@@ -157,8 +157,8 @@ void pickup_forks(void* PN)
     int rightPHIL = (PHIL_NUM + 4) % NUM_OF_PHIL;
     int leftPHIL = (PHIL_NUM + 1) % NUM_OF_PHIL;
 
+    
 
-    printf("Philosopher %d checking if neighbors are eating\n", PHIL_NUM);
     printf("Philosopher %d checking if left neighbor is eating\n", PHIL_NUM);
     if(P_Status[leftPHIL] == EATING)
     {
@@ -177,7 +177,7 @@ void pickup_forks(void* PN)
     sem_wait(&chopstick[leftPHIL]);
     P_Status[PHIL_NUM] = EATING;
 
-    printf("Philosopher %d unlocking status mutex\n", PHIL_NUM);
+    printf("Philosopher %d unlocking status mutex after fork pickup\n", PHIL_NUM);
     pthread_mutex_unlock(&P_StatusMutex);
 
 }
@@ -193,7 +193,7 @@ void return_forks(void *PN)
     int rightPHIL = (PHIL_NUM + 4) % NUM_OF_PHIL;
     int leftPHIL = (PHIL_NUM + 1) % NUM_OF_PHIL;
 
-    printf("Philosopher %d locking status mutex\n", PHIL_NUM);
+    printf("Philosopher %d locking status mutex for fork return\n", PHIL_NUM);
     pthread_mutex_lock(&P_StatusMutex); 
 
     printf("Philosopher %d releasing chopstick semaphores\n", PHIL_NUM);
