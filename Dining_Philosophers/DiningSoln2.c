@@ -136,9 +136,10 @@ void *philosopher(void *PN)
         //before we check our while condition
         printf("Philosopher %d checks meals\n", PHIL_NUM);
         sem_wait(&mealAccess);
-        printf("Philosopher %d's meals eaten thus far: %d \n", PHIL_NUM,meals );
+        printf("Philosopher %d see meals eaten thus far: %d \n", PHIL_NUM,meals );
     }
 
+    printf("Philosopher %d releases meal semaphore and exits\n", PHIL_NUM);
     //we exit the loop then we release our semaphore
     sem_post(&mealAccess);
 
