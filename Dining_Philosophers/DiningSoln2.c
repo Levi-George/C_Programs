@@ -96,7 +96,7 @@ int main(int argc, char * argv[])
 
 
     //release our semaphores and get each philosopher's meals had
-    printf("Meals had: ");
+    printf("Meals had: *************\n");
     
     for(int i = 0; i < NUM_OF_PHIL; i++)
     {
