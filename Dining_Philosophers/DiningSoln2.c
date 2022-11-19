@@ -100,7 +100,7 @@ int main(int argc, char * argv[])
     
     for(int i = 0; i < NUM_OF_PHIL; i++)
     {
-        printf("Phil. %d : %d meals ",i,totalMeals[i]);
+        printf("Phil. %d : %d meals \n",i,totalMeals[i]);
         sem_destroy(&chopstick[i]);
     }
 
