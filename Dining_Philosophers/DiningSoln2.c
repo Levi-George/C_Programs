@@ -87,6 +87,7 @@ int main(int argc, char * argv[])
 
     //sleep for time_Param
     sleep(time_Param);
+    printf("***********************Time is up, join threads\n");    
 
     //join threads back to main
     for(int i = 0; i < NUM_OF_PHIL; i++)
@@ -142,6 +143,9 @@ void *philosopher(void *PN)
     printf("Philosopher %d releases meal semaphore and exits\n", PHIL_NUM);
     //we exit the loop then we release our semaphore
     sem_post(&mealAccess);
+
+    //thread return
+    pthread_exit(PN);
 
 }
 
