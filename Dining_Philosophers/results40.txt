@@ -1,0 +1,295 @@
+Main Start
+Check arg
+Dining Philosophers, running sim for: 40.000000 s
+Before initialization of sem and mutex
+After Mutex and Semaphore initialization
+Before Thread Creation
+Philosopher 3 preparing to eat
+Philosopher 3 locking out for chopstick pickup
+Philosopher 3 is now hungry
+Philosopher 3 checking if left neighbor is eating
+Philosopher 4 preparing to eat
+Philosopher 4 locking out for chopstick pickup
+Philosopher 4 is now hungry
+Philosopher 4 checking if left neighbor is eating
+Philosopher 2 preparing to eat
+Philosopher 2 locking out for chopstick pickup
+Philosopher 2 is now hungry
+Philosopher 2 checking if left neighbor is eating
+Philosopher 2 checking if right neighbor is eating
+Philosopher 1 preparing to eat
+Philosopher 1 locking out for chopstick pickup
+Philosopher 1 is now hungry
+Philosopher 1 checking if left neighbor is eating
+Philosopher 1 checking if right neighbor is eating
+Philosopher 0 preparing to eat
+Philosopher 0 locking out for chopstick pickup
+Philosopher 0 is now hungry
+Philosopher 0 checking if left neighbor is eating
+Philosopher 0 checking if right neighbor is eating
+Philosopher 0 waiting for chopsticks
+Philosopher 0 unlocking status mutex after fork pickup
+Philosopher 0 preparing to think
+Philosopher 0 releasing chopstick semaphores
+Philosopher 0 locking status mutex for fork return
+Philosopher 0 now beginning to think/release any status waiters
+Philosopher 0 unlocking status mutex
+Philosopher 4 checking if right neighbor is eating
+Philosopher 4 waiting for chopsticks
+Philosopher 4 unlocking status mutex after fork pickup
+Philosopher 4 preparing to think
+Philosopher 4 releasing chopstick semaphores
+Philosopher 4 locking status mutex for fork return
+Philosopher 4 now beginning to think/release any status waiters
+Philosopher 4 unlocking status mutex
+Philosopher 3 checking if right neighbor is eating
+Philosopher 3 waiting for chopsticks
+Philosopher 3 unlocking status mutex after fork pickup
+Philosopher 0 see meals eaten thus far: 1 
+Philosopher 4 see meals eaten thus far: 1 
+Philosopher 4 preparing to eat
+Philosopher 4 locking out for chopstick pickup
+Philosopher 4 is now hungry
+Philosopher 4 checking if left neighbor is eating
+Philosopher 4 checking if right neighbor is eating
+Philosopher 0 preparing to eat
+Philosopher 0 locking out for chopstick pickup
+Philosopher 0 is now hungry
+Philosopher 0 checking if left neighbor is eating
+Philosopher 0 checking if right neighbor is eating
+Philosopher 0 waiting for chopsticks
+Philosopher 3 preparing to think
+Philosopher 3 releasing chopstick semaphores
+Philosopher 3 locking status mutex for fork return
+Philosopher 0 unlocking status mutex after fork pickup
+Philosopher 3 now beginning to think/release any status waiters
+Philosopher 3 unlocking status mutex
+Philosopher 4 waiting for chopsticks
+Philosopher 4 unlocking status mutex after fork pickup
+Philosopher 3 see meals eaten thus far: 1 
+Philosopher 3 preparing to eat
+Philosopher 3 locking out for chopstick pickup
+Philosopher 3 is now hungry
+Philosopher 3 checking if left neighbor is eating
+Philosopher 4 preparing to think
+Philosopher 4 releasing chopstick semaphores
+Philosopher 4 locking status mutex for fork return
+Philosopher 4 now beginning to think/release any status waiters
+Philosopher 4 unlocking status mutex
+Philosopher 3 checking if right neighbor is eating
+Philosopher 3 waiting for chopsticks
+Philosopher 0 preparing to think
+Philosopher 0 releasing chopstick semaphores
+Philosopher 3 unlocking status mutex after fork pickup
+Philosopher 0 locking status mutex for fork return
+Philosopher 0 now beginning to think/release any status waiters
+Philosopher 0 unlocking status mutex
+Philosopher 1 waiting for chopsticks
+Philosopher 0 see meals eaten thus far: 2 
+Philosopher 0 preparing to eat
+Philosopher 0 locking out for chopstick pickup
+Philosopher 3 preparing to think
+Philosopher 3 releasing chopstick semaphores
+Philosopher 3 locking status mutex for fork return
+Philosopher 4 see meals eaten thus far: 2 
+Philosopher 4 preparing to eat
+Philosopher 4 locking out for chopstick pickup
+Philosopher 1 unlocking status mutex after fork pickup
+Philosopher 0 is now hungry
+Philosopher 0 checking if left neighbor is eating
+Philosopher 3 now beginning to think/release any status waiters
+Philosopher 3 unlocking status mutex
+Philosopher 4 is now hungry
+Philosopher 4 checking if left neighbor is eating
+Philosopher 4 checking if right neighbor is eating
+Philosopher 4 waiting for chopsticks
+Philosopher 1 preparing to think
+Philosopher 1 releasing chopstick semaphores
+Philosopher 1 locking status mutex for fork return
+Philosopher 4 unlocking status mutex after fork pickup
+Philosopher 1 now beginning to think/release any status waiters
+Philosopher 1 unlocking status mutex
+Philosopher 2 waiting for chopsticks
+Philosopher 3 see meals eaten thus far: 2 
+Philosopher 3 preparing to eat
+Philosopher 3 locking out for chopstick pickup
+Philosopher 1 see meals eaten thus far: 1 
+Philosopher 1 preparing to eat
+Philosopher 1 locking out for chopstick pickup
+Philosopher 4 preparing to think
+Philosopher 4 releasing chopstick semaphores
+Philosopher 4 locking status mutex for fork return
+Philosopher 2 unlocking status mutex after fork pickup
+Philosopher 3 is now hungry
+Philosopher 3 checking if left neighbor is eating
+Philosopher 1 is now hungry
+Philosopher 1 checking if left neighbor is eating
+Philosopher 4 now beginning to think/release any status waiters
+Philosopher 4 unlocking status mutex
+Philosopher 3 checking if right neighbor is eating
+Philosopher 2 preparing to think
+Philosopher 2 releasing chopstick semaphores
+Philosopher 2 locking status mutex for fork return
+Philosopher 2 now beginning to think/release any status waiters
+Philosopher 2 unlocking status mutex
+Philosopher 1 checking if right neighbor is eating
+Philosopher 1 waiting for chopsticks
+Philosopher 1 unlocking status mutex after fork pickup
+Philosopher 1 preparing to think
+Philosopher 1 releasing chopstick semaphores
+Philosopher 1 locking status mutex for fork return
+Philosopher 1 now beginning to think/release any status waiters
+Philosopher 1 unlocking status mutex
+Philosopher 0 checking if right neighbor is eating
+Philosopher 0 waiting for chopsticks
+Philosopher 0 unlocking status mutex after fork pickup
+Philosopher 4 see meals eaten thus far: 3 
+Philosopher 4 preparing to eat
+Philosopher 4 locking out for chopstick pickup
+Philosopher 4 is now hungry
+Philosopher 4 checking if left neighbor is eating
+Philosopher 2 see meals eaten thus far: 1 
+Philosopher 2 preparing to eat
+Philosopher 2 locking out for chopstick pickup
+Philosopher 2 is now hungry
+Philosopher 2 checking if left neighbor is eating
+Philosopher 2 checking if right neighbor is eating
+Philosopher 2 waiting for chopsticks
+Philosopher 1 see meals eaten thus far: 2 
+Philosopher 1 preparing to eat
+Philosopher 1 locking out for chopstick pickup
+Philosopher 0 preparing to think
+Philosopher 0 releasing chopstick semaphores
+Philosopher 0 locking status mutex for fork return
+Philosopher 2 unlocking status mutex after fork pickup
+Philosopher 1 is now hungry
+Philosopher 1 checking if left neighbor is eating
+Philosopher 0 now beginning to think/release any status waiters
+Philosopher 0 unlocking status mutex
+Philosopher 4 checking if right neighbor is eating
+Philosopher 4 waiting for chopsticks
+Philosopher 2 preparing to think
+Philosopher 2 releasing chopstick semaphores
+Philosopher 2 locking status mutex for fork return
+Philosopher 4 unlocking status mutex after fork pickup
+Philosopher 2 now beginning to think/release any status waiters
+Philosopher 2 unlocking status mutex
+Philosopher 3 waiting for chopsticks
+Philosopher 3 unlocking status mutex after fork pickup
+Philosopher 0 see meals eaten thus far: 3 
+Philosopher 0 preparing to eat
+Philosopher 0 locking out for chopstick pickup
+Philosopher 0 is now hungry
+Philosopher 0 checking if left neighbor is eating
+Philosopher 0 checking if right neighbor is eating
+Philosopher 4 preparing to think
+Philosopher 4 releasing chopstick semaphores
+Philosopher 4 locking status mutex for fork return
+Philosopher 4 now beginning to think/release any status waiters
+Philosopher 4 unlocking status mutex
+Philosopher 0 waiting for chopsticks
+Philosopher 2 see meals eaten thus far: 2 
+Philosopher 2 preparing to eat
+Philosopher 2 locking out for chopstick pickup
+Philosopher 3 preparing to think
+Philosopher 3 releasing chopstick semaphores
+Philosopher 3 locking status mutex for fork return
+Philosopher 0 unlocking status mutex after fork pickup
+Philosopher 2 is now hungry
+Philosopher 2 checking if left neighbor is eating
+Philosopher 3 now beginning to think/release any status waiters
+Philosopher 3 unlocking status mutex
+Philosopher 2 checking if right neighbor is eating
+Philosopher 2 waiting for chopsticks
+Philosopher 4 see meals eaten thus far: 4 
+Philosopher 4 preparing to eat
+Philosopher 4 locking out for chopstick pickup
+Philosopher 3 see meals eaten thus far: 3 
+Philosopher 3 preparing to eat
+Philosopher 3 locking out for chopstick pickup
+Philosopher 0 preparing to think
+Philosopher 0 releasing chopstick semaphores
+Philosopher 0 locking status mutex for fork return
+Philosopher 2 unlocking status mutex after fork pickup
+Philosopher 4 is now hungry
+Philosopher 4 checking if left neighbor is eating
+Philosopher 3 is now hungry
+Philosopher 3 checking if left neighbor is eating
+Philosopher 3 checking if right neighbor is eating
+Philosopher 0 now beginning to think/release any status waiters
+Philosopher 0 unlocking status mutex
+Philosopher 4 checking if right neighbor is eating
+Philosopher 4 waiting for chopsticks
+Philosopher 0 see meals eaten thus far: 4 
+Philosopher 0 preparing to eat
+Philosopher 0 locking out for chopstick pickup
+Philosopher 2 preparing to think
+Philosopher 2 releasing chopstick semaphores
+Philosopher 2 locking status mutex for fork return
+Philosopher 4 unlocking status mutex after fork pickup
+Philosopher 0 is now hungry
+Philosopher 0 checking if left neighbor is eating
+Philosopher 0 checking if right neighbor is eating
+Philosopher 2 now beginning to think/release any status waiters
+Philosopher 2 unlocking status mutex
+Philosopher 1 checking if right neighbor is eating
+Philosopher 1 waiting for chopsticks
+Philosopher 4 preparing to think
+Philosopher 4 releasing chopstick semaphores
+Philosopher 4 locking status mutex for fork return
+Philosopher 1 unlocking status mutex after fork pickup
+Philosopher 4 now beginning to think/release any status waiters
+Philosopher 4 unlocking status mutex
+Philosopher 0 waiting for chopsticks
+Philosopher 0 unlocking status mutex after fork pickup
+Philosopher 1 preparing to think
+Philosopher 1 releasing chopstick semaphores
+Philosopher 1 locking status mutex for fork return
+Philosopher 1 now beginning to think/release any status waiters
+Philosopher 1 unlocking status mutex
+Philosopher 2 see meals eaten thus far: 3 
+Philosopher 2 preparing to eat
+Philosopher 2 locking out for chopstick pickup
+Philosopher 2 is now hungry
+Philosopher 2 checking if left neighbor is eating
+Philosopher 2 checking if right neighbor is eating
+Philosopher 2 waiting for chopsticks
+Philosopher 4 see meals eaten thus far: 5 
+Philosopher 4 preparing to eat
+Philosopher 4 locking out for chopstick pickup
+Philosopher 0 preparing to think
+Philosopher 0 releasing chopstick semaphores
+Philosopher 0 locking status mutex for fork return
+Philosopher 2 unlocking status mutex after fork pickup
+Philosopher 4 is now hungry
+Philosopher 4 checking if left neighbor is eating
+Philosopher 0 now beginning to think/release any status waiters
+Philosopher 0 unlocking status mutex
+Philosopher 4 checking if right neighbor is eating
+Philosopher 4 waiting for chopsticks
+Philosopher 1 see meals eaten thus far: 3 
+Philosopher 1 preparing to eat
+Philosopher 1 locking out for chopstick pickup
+Philosopher 2 preparing to think
+Philosopher 2 releasing chopstick semaphores
+Philosopher 2 locking status mutex for fork return
+Philosopher 0 see meals eaten thus far: 5 
+Philosopher 0 preparing to eat
+Philosopher 0 locking out for chopstick pickup
+Philosopher 4 unlocking status mutex after fork pickup
+Philosopher 1 is now hungry
+Philosopher 1 checking if left neighbor is eating
+Philosopher 2 now beginning to think/release any status waiters
+Philosopher 2 unlocking status mutex
+Philosopher 3 waiting for chopsticks
+Philosopher 3 unlocking status mutex after fork pickup
+Philosopher 0 is now hungry
+Philosopher 0 checking if left neighbor is eating
+Philosopher 0 checking if right neighbor is eating
+***********************Time is up, join threads
+Meals had: *************
+Phil. 0 : 5 meals 
+Phil. 1 : 3 meals 
+Phil. 2 : 4 meals 
+Phil. 3 : 3 meals 
+Phil. 4 : 5 meals 
