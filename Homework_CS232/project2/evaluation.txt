@@ -1,0 +1,11 @@
+Chris' Contributions
+
+Chris established the first contact, created our repository and helped outline the way we should start the project. Moreover, he began coding addWordOccurrence and IndexPage.
+
+He also did some pseudo code to outline what we would do in Main. Lastly, he took the time to meet up and help me walk through our code so we could both understand the logical performance of the program.
+
+Levi's Contributions
+
+I began coding freeTrieMemory and printTrieContents. I also performed some error proofing on Chris' code and I commented and modified code from Chris' portion as I felt was necessary.
+
+I setup a meeting on Friday to help go over the basic code and what we had left to do for the project. I also tested it using Valgrind and my website to ensure that it was working properly.
