@@ -145,18 +145,18 @@ int main()
 
 
 			//This will get the number of players again
-			while ((!cin || players > 4 || players < 2 )&& (pa == "Y" || pa == "y"))
+			while ((!cin || numOfPlayers > 4 || numOfPlayers < 2 )&& (pa == "Y" || pa == "y"))
 			{
 				cout << "Please re-enter the number of players." << endl;
 				cin.clear();
 				cin.ignore(1000, '\n');
-				cin >> players;
+				cin >> numOfPlayers;
 			}
 		}
 
 		//This will increment the turns, so if player one went first, this will allow player two to go next.
 		turnCounter++;
-		if (turnCounter > players)
+		if (turnCounter > numOfPlayers)
 		{
 			turnCounter = 1;
 		}
@@ -171,6 +171,7 @@ inline int rollDice()
 {
 	return rand() % 6+1;
 }
+
 //This function will facillitate movement for the special rolls
 void Move7(int player, int playerPos, int rollCode, int numOfPlayers)
 {
