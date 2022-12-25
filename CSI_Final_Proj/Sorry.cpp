@@ -13,14 +13,10 @@ Program Purpose: This program will start a game of sorry, it will allow up to fo
 using namespace std;//I will be removing this
 
 inline int rollDice();//This function will roll the dice
-int checkBoard(int, int, int);//This function will check the board for the location of the player
 int checkRoll(int, int, int);//This function will check the roll, and return the code appropriate for the roll.
 void Move7(int, int, int, int);//This function houses the move algorithm for the special rolls.
 void Move(int, int, int, int);//This function houses the move algorithm for the normal rolls.
 void printLocate(int, int, int);//This function will print the location of the players
-
-//This array represents the board
-int Board[51] = {};
 
 //I might refactor the board representation to be a 4 space vector or array
 //this will reduce the heavy lifting of looping through a 51 space vector
@@ -259,30 +255,6 @@ void Move(int player, int playerPos, int rollCode, int numOfPlayers)//player is 
 	}
 
 }
-
-//12-23-2022, we don't need this anymore, we changed the board to be four spaces indicating which space the player is on.
-//checkBoard will do the math, and actual sorting to figure out where the current player is.
-/*int checkBoard(int x, int players, int numOfPlayers) //X is the sum of the two dies, players is the current player, and numOfPlayers is the number of players
-{
-	int pLocate = -1;//This will track the current player's position
-	int y = 1;//This is a counter
-
-	//This will locate the current player
-	while (y <= numOfPlayers)
-	{
-		for (int i = 0; i < numOfPlayers; i++)
-		{
-			if (playerPositions[i] != -1)
-			{
-				pLocate = playerPositions[i];
-			}
-			
-		}
-		y++;
-	}
-
-	return pLocate;
-}*/
 
 //This will classify the roll, and return a roll code, which will be used to move the player
 int checkRoll(int die1, int die2, int players)//X is the first die, and Y is the second, players is the player currently rolling
