@@ -12,7 +12,7 @@ Program Purpose: This program will start a game of sorry, it will allow up to fo
 
 using namespace std;//I will be removing this
 
-int rollDice();//This function will roll the dice
+inline int rollDice();//This function will roll the dice
 int checkBoard(int, int, int);//This function will check the board for the location of the player
 int checkRoll(int, int, int);//This function will check the roll, and return the code appropriate for the roll.
 void Move7(int, int, int, int);//This function houses the move algorithm for the special rolls.
@@ -167,7 +167,7 @@ int main()
 }
 
 //This function will roll a single die
-int rollDice() 
+inline int rollDice() 
 {
 	return rand() % 6+1;
 }
