@@ -262,7 +262,7 @@ void Move(int player, int playerPos, int rollCode, int numOfPlayers)//player is 
 
 }
 
-
+//12-23-2022, we don't need this anymore, we changed the board to be four spaces indicating which space the player is on.
 //checkBoard will do the math, and actual sorting to figure out where the current player is.
 /*int checkBoard(int x, int players, int numOfPlayers) //X is the sum of the two dies, players is the current player, and numOfPlayers is the number of players
 {
