@@ -228,26 +228,30 @@ void Move(int player, int playerPos, int rollCode, int numOfPlayers)//player is 
 
 	//This ensures they don't roll over 50 or under 0
 	//if the player does not land exactly on 50, they do not win
-	if (((playerPos + rollCode) > 50 || (playerPos + rollCode) < 0) && (rollCode != 12 && rollCode != 7 && rollCode != 11))
+	if ((playerPositions[player] + rollCode) < 0)
 	{
-		Board[playerPos] = 0;
+		cout << "Player " << player << ": You have rolled a backspace, yet can go no further back, you are still on spot 0\n";
+		playerPositions[player] = 0;
 		return;
 	}
-
-	if(Board[(playerPos+rollCode)])//we can say != 0 or since 0 is falsy we can drop the comparison
+	else if(playerPositions[player] + rollCode > 50)
 	{
-
-		std::cout << "Player " << player << " has overtaken " << Board[playerPos+rollCode] << ". \n";
-
-		//player at lead spot goes to players old spot
-		Board[playerPos] = Board[playerPos+rollCode];
-
-		Board[playerPos+rollCode] = player; //player moves to new position
+		cout << "Player " << player << "You have passed the end of the board, you are now at spot 0\n";
+		playerPositions[player] = 0;
 	}
 	else
 	{
-		Board[playerPos] = 0;				//player is no longer at old position
-		Board[playerPos+rollCode] = player; //player moves to new position
+		for(int i = 0; i < numOfPlayers; i++)
+		{
+			if(playerPositions[player] == playerPositions[i] && player != i)
+			{
+				cout << "Player " << i << ": You have been landed on by Player " << player << "\n";
+				cout << "Player " << i << ": You have been set off the board, SORRY!\n";
+			}
+		}
+
+		playerPositions[player] = playerPositions[player] + rollCode;
+		cout << "Player " << player << ": You have moved to position " << playerPositions[player] << " \n";
 	}
 
 }
