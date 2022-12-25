@@ -180,25 +180,16 @@ void Move7(int player, int playerPos, int rollCode, int numOfPlayers)
 
 	int temp = -1;
 
-	for(int i = 1; i < 51; i++)
+	for(int i = 1; i < numOfPlayers; i++)
 	{
-		if(curr != -1 && Board[i] != 0)//when we find the first player on the board
+		if(playerPositions[i] < playerPositions[lastIndex])
 		{
-			lastPlayer = Board[i];
 			lastIndex = i;
-
-			curr = lastPlayer;
-			playersFound++;//we find the first player and mark it here.
-		}
-		else if(Board[i] != 0)//subsequent finds marked here
-		{
-			playersFound++;
 		}
 
-		if(playersFound == numOfPlayers && Board[i] != 0)//this should only trigger when we iterate the final player
+		if(playerPositions[i] > playerPositions[leadIndex])
 		{
-			leadPlayer == Board[i];
-			leadIndex == i;
+			leadIndex = i;
 		}
 	}
 
