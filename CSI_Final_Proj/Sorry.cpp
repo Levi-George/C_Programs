@@ -264,7 +264,7 @@ void Move(int player, int playerPos, int rollCode, int numOfPlayers)//player is 
 
 
 //checkBoard will do the math, and actual sorting to figure out where the current player is.
-int checkBoard(int x, int players, int numOfPlayers) //X is the sum of the two dies, players is the current player, and numOfPlayers is the number of players
+/*int checkBoard(int x, int players, int numOfPlayers) //X is the sum of the two dies, players is the current player, and numOfPlayers is the number of players
 {
 	int pLocate = -1;//This will track the current player's position
 	int y = 1;//This is a counter
@@ -272,11 +272,11 @@ int checkBoard(int x, int players, int numOfPlayers) //X is the sum of the two d
 	//This will locate the current player
 	while (y <= numOfPlayers)
 	{
-		for (int i = 0; i < 51; i++)
+		for (int i = 0; i < numOfPlayers; i++)
 		{
-			if (Board[i] == players)
+			if (playerPositions[i] != -1)
 			{
-				pLocate = i;
+				pLocate = playerPositions[i];
 			}
 			
 		}
@@ -284,7 +284,7 @@ int checkBoard(int x, int players, int numOfPlayers) //X is the sum of the two d
 	}
 
 	return pLocate;
-}
+}*/
 
 //This will classify the roll, and return a roll code, which will be used to move the player
 int checkRoll(int die1, int die2, int players)//X is the first die, and Y is the second, players is the player currently rolling
