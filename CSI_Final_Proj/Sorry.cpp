@@ -294,12 +294,15 @@ int checkRoll(int die1, int die2, int players)//X is the first die, and Y is the
 	int z = 0;//Simple counter
 	
 	//This loop will check for any players on the board, and set the onBoard flag to true if there are people on the board
-	for (int i = 0; i < 51; i++)
+	for (int i = 0; i < 4; i++)
 	{
-		if (Board[i] == players)
+		if (playerPositions[i] != -1)
 		{
 			onBoard = true;
+			if(i == players)
+				amIonBoard = true;
 		}
+
 	}
 
 	//This will run, if and only if the player is not on the board, and they roll a double
@@ -307,17 +310,6 @@ int checkRoll(int die1, int die2, int players)//X is the first die, and Y is the
 	{
 		cout << "Player " << players << " has rolled a double, they can now move." << endl;
 		onBoard = true;
-	}
-
-	//Checks if they are on the board, if the counter has reached 50(whichs implies the user isn't on the board), and if the
-	//two die aren't similar(if they are, this loop is pointless, because the player is now able to move.
-	while (onBoard == false && z < 51 && x != y)	
-	{
-		if (Board[z] == players)
-		{
-			onBoard = true;
-		}
-		z++;
 	}
 
 	//If onBoard is flagged as true, it will take the die sum(x+y) and translate it into a roll code
