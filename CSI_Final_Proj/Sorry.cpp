@@ -24,6 +24,8 @@ int Board[51] = {};
 
 //I might refactor the board representation to be a 4 space vector or array
 //this will reduce the heavy lifting of looping through a 51 space vector
+int playerPositions[4] = {0, 0, 0, 0}; 
+
 
 int main()
 {
@@ -31,29 +33,28 @@ int main()
 
 	int die1, die2;//These will store the die roll values
 
-	int players;//This will store the number of players
+	int numOfPlayers;//This will store the number of players
 
-	int turnCounter = 1;//This will keep track of whose turn it is
+	int turnCounter = 0;//This will keep track of whose turn it is
 	int	rollCode;//This will represent the code assigned to the roll the player made
 	int playerPos;//This will represent the current players position
 	bool noWin = true;//This represents whether or not someone has won
 	
 	//This gets information from the users.
 	cout << "Welcome to Sorry!" << '\n' << "How many players will there be today?(Max 4, Min 2)" << endl;
-	cin >> players;
+	cin >> numOfPlayers;
 
 	//This loop will run to ensure the user doesn't put in any funky input
-	while (!cin || players > 4 || players < 2)
+	while (!cin || numOfPlayers > 4 || numOfPlayers < 2)
 	{
 		cout << "I'm sorry, I can not set up a game of sorry with the value you put in, please enter an appropriate value." << endl;
 		cin.clear();
 		cin.ignore(1000, '\n');
-		cin >> players;
+		cin >> numOfPlayers;
 	}
 	
 	//This makes up for the disparity with the array in counting - ~2018
 	/*cout << "\nRemember, you will start on space 0, so if you were to roll a six on the first space, it will show you on space 5 at the end of your turn.\n";*/
-
 	// ^^^^^^^ Anything in the backend of your systems should not be made transparent to the user, the system should work without exposing itself to the user. - 2022
 
 	//This loop will run the actual portion which is the game, while no one has won
@@ -61,57 +62,59 @@ int main()
 	{
 		//This will print out the beginning of a player's turn
 		cout << " \nIt is Player " << turnCounter << "'s turn" << endl;
-		cout << "They are rolling the die. \n Rolling..." << endl;
+		cout << "They are rolling the die. \n Rolling... (Press any button)" << endl;
 		system("Pause");
 		die1 = rollDice(); die2 = rollDice();
-		cout << die1 << " " << die2 << "\n" <<endl;
+		cout << die1 << " " << die2 << "\n" << endl;
 
 		//This will execute the necessary functions
 		rollCode = checkRoll(die1, die2, turnCounter);
-		playerPos = checkBoard(rollCode, turnCounter, players);
 
 		//This will execute specific actions based on the roll code, and position of the player
-		if ((rollCode == 7 || rollCode == 11) && playerPos != -1)
+		if ((rollCode == 7 || rollCode == 11) && playerPositions[turnCounter] != -1)
 		{
-			Move7(turnCounter, playerPos, rollCode, players);
+			Move7(turnCounter, playerPositions[turnCounter], rollCode, numOfPlayers);
 		}
 		else if (rollCode == 12)//this roll code should always put the player at the zeroeth position since 
 		{											//it is a double roll - remove  && playerPos != -1
 
-			if(!Board[0])//in case a player was just put on spot 0
+			for(int i = 0; i < numOfPlayers; i++)
 			{
-				std::cout << "Player " << Board[0] << "has been taken off the board, Player " << turnCounter << " is now at the start of the board." << endl;
+				if(playerPositions[i] == 0)//in case a player was just put on spot 0
+				{
+					std::cout << "Player " << playerPositions[i] << "has been taken off the board, Player " << turnCounter << " is now at the start of the board." << endl;
+					playerPositions[i] = -1;
+				}
 			}
 
-			Board[playerPos] = 0;
-			Board[0] = turnCounter; //this doubles as showing the current player
-		}
-		else if(rollCode == 0)
-		{
-			//This will save some computing power by skipping Move when rollCode == 0
+			playerPositions[turnCounter] = 0;
+			
 		}
 		else
 		{
-			Move(turnCounter, playerPos, rollCode, players);
+			Move(turnCounter, playerPos, rollCode, numOfPlayers);
 		}
 
 		//This will print the locations of the players
-		printLocate(rollCode, turnCounter, players);
+		printLocate(rollCode, turnCounter, numOfPlayers);
 
 		//This will check if any player has won.
-		if (Board[50] != 0)
+		for(int i = 0; i < numOfPlayers; i++)
 		{
-			//This will allow the user to exit the game if they wish, as well as let them know they won.
-			noWin = false;
-			cout << "Player " << Board[50] << " has reached the finish." << endl;
-			players = 0;
-
-			//This will reset the board
-			for (int i = 0; i < 51; i++)
+			if (playerPositions[i] == 50)
 			{
-				Board[i] = 0;
-			}
+				//This will allow the user to exit the game if they wish, as well as let them know they won.
+				noWin = false;
+				cout << "Player " << playerPositions[i] << " has reached the finish." << endl;
+				numOfPlayers = 0;
 
+				//This will reset the board
+				for(int i = 0; i < 4; i++)
+				{
+					playerPositions[i] == 0;
+				}
+
+			}
 		}
 
 		//This will query the user as to whether or not they want to play again.
