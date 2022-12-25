@@ -193,26 +193,27 @@ void Move7(int player, int playerPos, int rollCode, int numOfPlayers)
 		}
 	}
 
-	//this needs refactored
 	//Depending on what is rolled this will switch two players positions, from lead player to last, or last to lead
-	if (rollCode == 7 && leadIndex != playerPos && playerPos != -1)//Player must not be the leader and must be on the board
+	if (leadIndex != player && rollCode == 7 && playerPositions[player] != -1)//Player must not be the leader and must be on the board
 	{
-		cout << "Player " << player << " switched places with Player " << leadPlayer << endl;
-		Board[leadIndex] = player;
-		Board[playerPos] = leadPlayer;
+		cout << "Player " << player << " switched places with Player " << leadIndex << endl;
+		temp = playerPositions[player];
+		playerPositions[player] = playerPositions[leadIndex];
+		playerPositions[leadIndex] = temp;
 	}
-	else if (leadIndex == playerPos && rollCode == 7 && playerPos != -1)//If player is in lead and they rolled a 7 (player swaps with lead) nothing changes
+	else if (leadIndex == player && rollCode == 7 && playerPositions[player] != -1)//If player is in lead and they rolled a 7 (player swaps with lead) nothing changes
 	{
 		cout << " Nothing happened, Player " << player << " is already in the lead." << endl;
 	}
 
-	if (rollCode == 11 && lastIndex != playerPos && playerPos != -1)//If the player isn't last and they are on the board, then they will get put in the last position.
+	if (lastIndex != player && rollCode == 11 && playerPositions[player] != -1)//If the player isn't last and they are on the board, then they will get put in the last position.
 	{
-		cout << "Player " << player << " switched places with Player " << lastPlayer << endl;
-		Board[lastIndex] = player;
-		Board[playerPos] = lastPlayer;
+		cout << "Player " << player << " switched places with Player " << lastIndex << endl;
+		temp = playerPositions[player];
+		playerPositions[player] = playerPositions[lastIndex];
+		playerPositions[lastIndex] = temp;
 	}
-	else if (lastIndex == playerPos && rollCode == 11 && playerPos != -1)//If the player is in last or not on the board, then nothing will change.
+	else if (lastIndex == player && rollCode == 11 && playerPositions[player] != -1)//If the player is in last or not on the board, then nothing will change.
 	{
 		cout << "Nothing happened. Player " << player << " is already in last." << endl;
 	}
