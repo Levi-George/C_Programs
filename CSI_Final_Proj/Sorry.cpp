@@ -175,12 +175,10 @@ inline int rollDice()
 void Move7(int player, int playerPos, int rollCode, int numOfPlayers)
 {
 	//This will declare the lead and last players
-	int leadIndex = playerPos;
-	int leadPlayer = player;
-	int lastIndex = playerPos;
-	int lastPlayer = player;
+	int leadIndex = player;
+	int lastIndex = player;
 
-	int curr = -1, playersFound = 0;
+	int temp = -1;
 
 	for(int i = 1; i < 51; i++)
 	{
