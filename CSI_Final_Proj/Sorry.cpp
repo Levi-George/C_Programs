@@ -383,31 +383,22 @@ int checkRoll(int x, int y, int players)//X is the first die, and Y is the secon
 	return 0;
 }
 
+//Refactored for using four index array that tracks locations - LEG - 22/12/11
 //printLocate will find/print the locations of each player
 void printLocate(int x, int players, int numOfPlayers)
 {
-	//These will keep track of the players it has tracked, and prevents double output
-	int y = 1;
-	int checkcounter = 0;
 
-	//This will find and then tell the user where the players are.
-	while (y <= numOfPlayers)
+	for (int i = 0; i < numOfPlayers; i++)
 	{
-		checkcounter = 0;//This will set the counter to 0, in order to prevent improper output
-		for (int i = 0; i < 51; i++)
+		
+		if (playerPositions[i] == -1)//If the player is not on the board, and the loop is finished, this will tell the user
 		{
-			//If the player is on the board, this will tell the user where
-			if (Board[i] == y)
-			{
-				cout << "Player " << y << " is at position " << (i) << endl;
-				checkcounter++;
-			}
-			else if(i == 50 && checkcounter == 0)//If the player is not on the board, and the loop is finished, this will tell the user
-			{
-				cout << "Player " << y << " is not on the board yet." << endl;
-			}
-
+			cout << "Player " << i << " is not on the board yet." << endl;
 		}
-		y++;
+		else //If the player is on the board, this will tell the user where
+		{
+			cout << "Player " << i << " is at position " << playerPositions[i] << endl;
+		}
+
 	}
 }
