@@ -287,9 +287,10 @@ int checkBoard(int x, int players, int numOfPlayers) //X is the sum of the two d
 }
 
 //This will classify the roll, and return a roll code, which will be used to move the player
-int checkRoll(int x, int y, int players)//X is the first die, and Y is the second, players is the player currently rolling
+int checkRoll(int die1, int die2, int players)//X is the first die, and Y is the second, players is the player currently rolling
 {
 	bool onBoard = false;//Keeps track of whether or not they are on the board
+	bool amIonBoard = false;
 	int z = 0;//Simple counter
 	
 	//This loop will check for any players on the board, and set the onBoard flag to true if there are people on the board
@@ -302,7 +303,7 @@ int checkRoll(int x, int y, int players)//X is the first die, and Y is the secon
 	}
 
 	//This will run, if and only if the player is not on the board, and they roll a double
-	if (x == y && onBoard == false)
+	if (die1 == die2 && onBoard == false)
 	{
 		cout << "Player " << players << " has rolled a double, they can now move." << endl;
 		onBoard = true;
@@ -324,7 +325,7 @@ int checkRoll(int x, int y, int players)//X is the first die, and Y is the secon
 	{
 		cout << '\n';
 
-		switch (x + y)
+		switch (die1 + die2)
 		{
 		case 2:
 			cout << "Player " << players << " can move 2 spaces." << endl;
