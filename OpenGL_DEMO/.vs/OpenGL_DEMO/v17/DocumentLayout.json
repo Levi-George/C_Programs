@@ -1,37 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OPENGL_DEMO\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\main.cpp",
-              "RelativeDocumentMoniker": "main.cpp",
-              "ToolTip": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\main.cpp",
-              "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-13T05:36:24.406Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
