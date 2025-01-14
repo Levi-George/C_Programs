@@ -1,2 +1,7 @@
-﻿  main.cpp
+﻿  EBO.cpp
+  main.cpp
+  shaderClass.cpp
+  VAO.cpp
+  VBO.cpp
+  Generating Code...
   OpenGL_DEMO.vcxproj -> C:\Users\lmeg0\Documents\Portfolio\C-Programs\OpenGL_DEMO\x64\Debug\OpenGL_DEMO.exe
