@@ -7,6 +7,22 @@
       "RelativeMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\VAO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|solutionrelative:VAO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\VAO.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|solutionrelative:VAO.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\default.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|solutionrelative:default.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\default.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|solutionrelative:default.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\ShaderClass.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|solutionrelative:ShaderClass.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -19,14 +35,6 @@
       "RelativeMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|solutionrelative:VBO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\VAO.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|solutionrelative:VAO.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\VAO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|solutionrelative:VAO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\EBO.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|solutionrelative:EBO.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -37,14 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\ShaderClass.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|solutionrelative:ShaderClass.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\default.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|solutionrelative:default.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\default.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|solutionrelative:default.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +58,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "EBO.cpp",
               "DocumentMoniker": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\EBO.cpp",
               "RelativeDocumentMoniker": "EBO.cpp",
@@ -66,12 +66,11 @@
               "RelativeToolTip": "EBO.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-14T15:34:01.944Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-14T15:34:01.944Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "EBO.h",
               "DocumentMoniker": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\EBO.h",
               "RelativeDocumentMoniker": "EBO.h",
@@ -79,38 +78,37 @@
               "RelativeToolTip": "EBO.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-14T15:33:31.576Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-14T15:33:31.576Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "VAO.cpp",
               "DocumentMoniker": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\VAO.cpp",
               "RelativeDocumentMoniker": "VAO.cpp",
               "ToolTip": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\VAO.cpp",
               "RelativeToolTip": "VAO.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-14T15:31:39.636Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "VAO.h",
               "DocumentMoniker": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\VAO.h",
               "RelativeDocumentMoniker": "VAO.h",
               "ToolTip": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\VAO.h",
               "RelativeToolTip": "VAO.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-14T15:30:56.097Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "VBO.cpp",
               "DocumentMoniker": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\VBO.cpp",
               "RelativeDocumentMoniker": "VBO.cpp",
@@ -118,12 +116,11 @@
               "RelativeToolTip": "VBO.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-14T15:09:16.085Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-14T15:09:16.085Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "VBO.h",
               "DocumentMoniker": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\VBO.h",
               "RelativeDocumentMoniker": "VBO.h",
@@ -131,12 +128,11 @@
               "RelativeToolTip": "VBO.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-14T15:08:00.266Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-14T15:08:00.266Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "shaderClass.cpp",
               "DocumentMoniker": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\shaderClass.cpp",
               "RelativeDocumentMoniker": "shaderClass.cpp",
@@ -144,12 +140,11 @@
               "RelativeToolTip": "shaderClass.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-14T15:00:12.049Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-14T15:00:12.049Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "shaderClass.h",
               "DocumentMoniker": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\shaderClass.h",
               "RelativeDocumentMoniker": "shaderClass.h",
@@ -157,20 +152,20 @@
               "RelativeToolTip": "shaderClass.h",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-14T05:27:08.643Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-14T05:27:08.643Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
               "Title": "default.vert",
               "DocumentMoniker": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\default.vert",
               "RelativeDocumentMoniker": "default.vert",
               "ToolTip": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\default.vert",
               "RelativeToolTip": "default.vert",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-14T05:23:15.142Z"
+              "WhenOpened": "2025-01-14T05:23:15.142Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -180,22 +175,23 @@
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAAABYAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFIAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-14T04:58:48.127Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
               "Title": "default.frag",
               "DocumentMoniker": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\default.frag",
               "RelativeDocumentMoniker": "default.frag",
               "ToolTip": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\default.frag",
               "RelativeToolTip": "default.frag",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-14T05:25:31.88Z"
+              "WhenOpened": "2025-01-14T05:25:31.88Z",
+              "EditorCaption": ""
             }
           ]
         }
