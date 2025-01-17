@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\stb.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|solutionrelative:stb.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\ShaderClass.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{20E201D1-3323-4B42-BEC6-87FF2C697803}|OpenGL_DEMO.vcxproj|solutionrelative:ShaderClass.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -54,11 +58,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
+              "Title": "stb.cpp",
+              "DocumentMoniker": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\stb.cpp",
+              "RelativeDocumentMoniker": "stb.cpp",
+              "ToolTip": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\stb.cpp",
+              "RelativeToolTip": "stb.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-17T00:21:52.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "EBO.cpp",
               "DocumentMoniker": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\EBO.cpp",
               "RelativeDocumentMoniker": "EBO.cpp",
@@ -70,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "EBO.h",
               "DocumentMoniker": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\EBO.h",
               "RelativeDocumentMoniker": "EBO.h",
@@ -82,7 +99,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "VAO.cpp",
               "DocumentMoniker": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\VAO.cpp",
               "RelativeDocumentMoniker": "VAO.cpp",
@@ -94,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "VAO.h",
               "DocumentMoniker": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\VAO.h",
               "RelativeDocumentMoniker": "VAO.h",
@@ -106,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "VBO.cpp",
               "DocumentMoniker": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\VBO.cpp",
               "RelativeDocumentMoniker": "VBO.cpp",
@@ -118,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "VBO.h",
               "DocumentMoniker": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\VBO.h",
               "RelativeDocumentMoniker": "VBO.h",
@@ -130,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "shaderClass.cpp",
               "DocumentMoniker": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\shaderClass.cpp",
               "RelativeDocumentMoniker": "shaderClass.cpp",
@@ -138,12 +155,11 @@
               "RelativeToolTip": "shaderClass.cpp",
               "ViewState": "AgIAACAAAAAAAAAAAAAowC0AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-14T15:00:12.049Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-14T15:00:12.049Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "shaderClass.h",
               "DocumentMoniker": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\shaderClass.h",
               "RelativeDocumentMoniker": "shaderClass.h",
@@ -151,12 +167,11 @@
               "RelativeToolTip": "shaderClass.h",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-14T05:27:08.643Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-14T05:27:08.643Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "default.vert",
               "DocumentMoniker": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\default.vert",
               "RelativeDocumentMoniker": "default.vert",
@@ -164,8 +179,7 @@
               "RelativeToolTip": "default.vert",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-14T05:23:15.142Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-14T05:23:15.142Z"
             },
             {
               "$type": "Document",
@@ -175,14 +189,14 @@
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAAAG4AAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAowDEAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-14T04:58:48.127Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "default.frag",
               "DocumentMoniker": "C:\\Users\\lmeg0\\Documents\\Portfolio\\C-Programs\\OpenGL_DEMO\\default.frag",
               "RelativeDocumentMoniker": "default.frag",
